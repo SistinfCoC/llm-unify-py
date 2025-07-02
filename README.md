@@ -16,10 +16,10 @@ Future versions will include support for additional providers.
 
 ### Install the core library from PyPI
 
-To install the library directly from [PyPI](https://pypi.org/project/llm-unify/), run:
+To install the library directly from [PyPI](https://pypi.org/project/llmUnify/), run:
 
 ```bash
-pip install llm-unify
+pip install llmUnify
 ```
 
 ---
@@ -29,7 +29,7 @@ pip install llm-unify
 To install the library with **AWS-specific** dependencies, use:
 
 ```bash
-pip install 'llm-unify[aws]'
+pip install 'llmUnify[aws]'
 ```
 
 ---
@@ -39,7 +39,7 @@ pip install 'llm-unify[aws]'
 To install the library with **all available provider-specific dependencies**, use:
 
 ```bash
-pip install 'llm-unify[all]'
+pip install 'llmUnify[all]'
 ```
 
 ## Quickstart
