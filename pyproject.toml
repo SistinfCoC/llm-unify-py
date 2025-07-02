@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "llmUnify"
-version = "1.0.0"
+version = "1.0.1"
 description = "LlmUnify is a library that abstracts connections to major LLM model providers, simplifying their invocation and interoperability."
 authors = ["Sistemi Informativi S.r.l."]
 readme = "README.md"
