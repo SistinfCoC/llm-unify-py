@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "llmUnify"
+version = "1.0.0"
+description = "LlmUnify is a library that abstracts connections to major LLM model providers, simplifying their invocation and interoperability."
+authors = ["Sistemi Informativi S.r.l."]
+readme = "README.md"
+packages = [{include = "llmUnify"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^2.10.5"
+
+boto3 = { version = "^1.36.2", optional = true }
+ibm-watsonx-ai = { version = "^1.1.16", optional = true }
+requests={ version = "^2.32.3", optional = true }
+vertexai = { version = "^1.71.1", optional = true }
+azure-ai-inference = { version = "^1.0.0b9", optional = true } 
+
+[tool.poetry.extras]
+aws = ["boto3"]
+azure = ["azure-ai-inference"]
+google = ["vertexai"]
+ollama = ["requests"]
+watsonx = ["ibm-watsonx-ai"]
+all = ["boto3", "ibm-watsonx-ai", "requests", "vertexai", "azure-ai-inference"]
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.2"
+mypy = "^1.14.1"
+
+boto3 = "^1.36.1"
+ibm-watsonx-ai = "^1.1.16"
+requests = "2.32.3"
+vertexai = "^1.71.1"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+pytest-cov= "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
